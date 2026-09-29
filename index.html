@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Taichill｜台中景點推薦</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                TAI<span>CHILL</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">首頁</a>
+                <a href="#explore">景點探索</a>
+                <a href="#mood">今天想怎麼 Chill</a>
+                <a href="#map">地圖</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- 首頁 Hero -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                EXPLORE TAICHUNG
+            </p>
+
+            <h1>
+                Chill 一下，<br>
+                台中剛剛好。
+            </h1>
+
+            <p>
+                不知道今天去哪裡？
+                <br>
+                讓 Taichill 幫你找到屬於你的台中。
+            </p>
+
+            <a href="#mood" class="main-button">
+                開始探索 →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- 今日想怎麼 Chill -->
+    <section id="mood" class="section">
+
+        <div class="section-title">
+
+            <p>WHAT DO YOU WANT TO DO?</p>
+
+            <h2>
+                今天想怎麼 Chill？
+            </h2>
+
+            <span>
+                選一個今天的心情吧！
+            </span>
+
+        </div>
+
+
+        <div class="mood-container">
+
+            <button class="mood-card" onclick="showRecommendation('photo')">
+
+                <div class="mood-icon">
+                    📸
+                </div>
+
+                <h3>
+                    拍美照
+                </h3>
+
+                <p>
+                    打卡、拍照、IG美照
+                </p>
+
+            </button>
+
+
+            <button class="mood-card" onclick="showRecommendation('coffee')">
+
+                <div class="mood-icon">
+                    ☕
+                </div>
+
+                <h3>
+                    喝咖啡
+                </h3>
+
+                <p>
+                    咖啡廳、甜點、文青
+                </p>
+
+            </button>
+
+
+            <button class="mood-card" onclick="showRecommendation('date')">
+
+                <div class="mood-icon">
+                    💕
+                </div>
+
+                <h3>
+                    約會去
+                </h3>
+
+                <p>
+                    情侶、浪漫、約會
+                </p>
+
+            </button>
+
+
+            <button class="mood-card" onclick="showRecommendation('nature')">
+
+                <div class="mood-icon">
+                    🌳
+                </div>
+
+                <h3>
+                    放空一下
+                </h3>
+
+                <p>
+                    自然、散步、療癒
+                </p>
+
+            </button>
+
+        </div>
+
+
+        <!-- 推薦結果 -->
+
+        <div id="recommendation" class="recommendation">
+
+            <h3>
+                ✨ 今天推薦你
+            </h3>
+
+            <p id="recommendation-text">
+                選擇一個你的心情，看看 Taichill 推薦什麼！
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 景點推薦 -->
+
+    <section id="explore" class="section explore">
+
+        <div class="section-title">
+
+            <p>EXPLORE TAICHUNG</p>
+
+            <h2>
+                台中景點推薦
+            </h2>
+
+            <span>
+                找一個地方，讓今天變得不太一樣。
+            </span>
+
+        </div>
+
+
+        <div class="place-grid">
+
+
+            <!-- 高美濕地 -->
+
+            <article class="place-card">
+
+                <div class="place-image gaomei">
+
+                    <span>
+                        01
+                    </span>
+
+                </div>
+
+                <div class="place-content">
+
+                    <p class="tag">
+                        🌅 夕陽・自然
+                    </p>
+
+                    <h3>
+                        高美濕地
+                    </h3>
+
+                    <p>
+                        看著夕陽慢慢落下，
+                        吹吹海風，放慢一下生活的速度。
+                    </p>
+
+                    <button onclick="showPlace('高美濕地')">
+                        查看景點 →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 審計新村 -->
+
+            <article class="place-card">
+
+                <div class="place-image audit">
+
+                    <span>
+                        02
+                    </span>
+
+                </div>
+
+                <div class="place-content">
+
+                    <p class="tag">
+                        🎨 文創・咖啡
+                    </p>
+
+                    <h3>
+                        審計新村
+                    </h3>
+
+                    <p>
+                        逛逛特色小店，
+                        找間咖啡廳坐下來，享受悠閒午後。
+                    </p>
+
+                    <button onclick="showPlace('審計新村')">
+                        查看景點 →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 大坑 -->
+
+            <article class="place-card">
+
+                <div class="place-image dakeng">
+
+                    <span>
+                        03
+                    </span>
+
+                </div>
+
+                <div class="place-content">
+
+                    <p class="tag">
+                        🌳 自然・登山
+                    </p>
+
+                    <h3>
+                        大坑步道
+                    </h3>
+
+                    <p>
+                        暫時離開城市，
+                        走進山裡享受自然與新鮮空氣。
+                    </p>
+
+                    <button onclick="showPlace('大坑步道')">
+                        查看景點 →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 國美館 -->
+
+            <article class="place-card">
+
+                <div class="place-image museum">
+
+                    <span>
+                        04
+                    </span>
+
+                </div>
+
+                <div class="place-content">
+
+                    <p class="tag">
+                        🖼️ 藝術・文藝
+                    </p>
+
+                    <h3>
+                        國立臺灣美術館
+                    </h3>
+
+                    <p>
+                        看展、散步，
+                        找一個適合慢下來的午後。
+                    </p>
+
+                    <button onclick="showPlace('國立臺灣美術館')">
+                        查看景點 →
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 地圖 -->
+
+    <section id="map" class="section map-section">
+
+        <div class="section-title">
+
+            <p>FIND YOUR WAY</p>
+
+            <h2>
+                台中地圖
+            </h2>
+
+            <span>
+                開啟地圖，找到你的下一站。
+            </span>
+
+        </div>
+
+
+        <div class="map-box">
+
+            <div class="map-icon">
+                📍
+            </div>
+
+            <h3>
+                Explore Taichung
+            </h3>
+
+            <p>
+                從市區一路玩到海線，
+                今天想去哪裡？
+            </p>
+
+            <a
+                href="https://www.google.com/maps/search/台中景點"
+                target="_blank"
+                class="main-button">
+
+                開啟 Google Maps →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-logo">
+            TAI<span>CHILL</span>
+        </div>
+
+        <p>
+            Chill 一下，台中剛剛好。
+        </p>
+
+        <small>
+            © 2026 Taichill. Explore Taichung in your own way.
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
