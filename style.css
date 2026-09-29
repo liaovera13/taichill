@@ -1,0 +1,539 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        sans-serif;
+
+    background: #f7f4ed;
+    color: #26352d;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(247, 244, 237, 0.92);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #ddd8ca;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 30px;
+}
+
+.logo,
+.footer-logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #d98236;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #26352d;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d98236;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(
+            rgba(38, 53, 45, 0.55),
+            rgba(38, 53, 45, 0.55)
+        ),
+        linear-gradient(
+            135deg,
+            #9cae9d,
+            #d8c6a7
+        );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.main-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #d98236;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    background: #c46e25;
+}
+
+
+/* =========================
+   Section
+========================= */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 110px 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #d98236;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: #777;
+}
+
+
+/* =========================
+   Mood
+========================= */
+
+.mood-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.mood-card {
+    border: none;
+
+    padding: 35px 20px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    color: #26352d;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+.mood-card:hover {
+    transform: translateY(-8px);
+}
+
+.mood-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.mood-card h3 {
+    margin-bottom: 8px;
+}
+
+.mood-card p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================
+   Recommendation
+========================= */
+
+.recommendation {
+    margin-top: 35px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #e7dfcf;
+
+    border-radius: 20px;
+}
+
+.recommendation h3 {
+    margin-bottom: 10px;
+}
+
+.recommendation p {
+    color: #666;
+}
+
+
+/* =========================
+   景點卡片
+========================= */
+
+.explore {
+    max-width: 1300px;
+}
+
+.place-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.place-card {
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+}
+
+.place-image {
+    height: 300px;
+
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    padding: 20px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.place-image span {
+    background: rgba(255,255,255,0.9);
+
+    padding: 5px 12px;
+
+    border-radius: 30px;
+
+    font-weight: 800;
+}
+
+
+/* 景點圖片 */
+
+.gaomei {
+    background:
+        linear-gradient(
+            135deg,
+            #d6b57a,
+            #607c80
+        );
+}
+
+.audit {
+    background:
+        linear-gradient(
+            135deg,
+            #c89e75,
+            #78917f
+        );
+}
+
+.dakeng {
+    background:
+        linear-gradient(
+            135deg,
+            #78906c,
+            #344c3b
+        );
+}
+
+.museum {
+    background:
+        linear-gradient(
+            135deg,
+            #d2bda4,
+            #8b8174
+        );
+}
+
+.place-content {
+    padding: 30px;
+}
+
+.tag {
+    color: #d98236;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.place-content h3 {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.place-content p {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.place-content button {
+    border: none;
+
+    background: none;
+
+    color: #26352d;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   Map
+========================= */
+
+.map-section {
+    max-width: 900px;
+}
+
+.map-box {
+    text-align: center;
+
+    background: #dfe5dc;
+
+    border-radius: 30px;
+
+    padding: 70px 30px;
+}
+
+.map-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.map-box h3 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.map-box p {
+    margin-bottom: 25px;
+
+    color: #666;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: #26352d;
+
+    color: white;
+}
+
+footer p {
+    margin: 10px 0 25px;
+
+    color: #d5d5d5;
+}
+
+footer small {
+    color: #aaa;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 25px 80px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .mood-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .place-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .place-image {
+        height: 250px;
+    }
+}
+
+
+/* 更小的手機 */
+
+@media (max-width: 450px) {
+
+    .mood-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+}
